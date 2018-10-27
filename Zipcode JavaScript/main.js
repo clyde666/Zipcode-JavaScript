@@ -63,4 +63,4 @@ function deleteLocation(e){
         document.querySelector('.zip').value = '';
         document.querySelector('.icon-check').remove();
     }
-}
+};
