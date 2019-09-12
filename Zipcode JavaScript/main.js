@@ -50,7 +50,7 @@ function getInfo(e){
         .catch(err => console.log(err))
 };
 function showIcon(icon){
-    //Clear Icons
+    //Clear Icon
     document.querySelector('.icon-remove').style.display = 'none';
     document.querySelector('.icon-check').style.display = 'none';
     // Show Corrent Icon
