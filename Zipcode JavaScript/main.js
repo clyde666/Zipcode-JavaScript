@@ -7,7 +7,7 @@ function getInfo(e){
     e.preventDefault()
     let zip = document.querySelector('.zip').value;
     
-    //Make request to zip API
+    //Make request to zip 
     fetch(`http://api.zippopotam.us/us/${zip}`)
         .then(response => {
             if(response.status != 200){
