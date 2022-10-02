@@ -52,7 +52,7 @@ function getInfo(e){
 function showIcon(icon){
     //Clear Icon
     document.querySelector('.icon-remove').style.display = 'none';
-    document.querySelector('.icon-check').style.display = 'none';
+    document.querySelector('.icon-check').style.display = 'none'
     // Show Corrent Icon
     document.querySelector(`.icon-${icon}`).style.display = 'inline-flex';
 };
