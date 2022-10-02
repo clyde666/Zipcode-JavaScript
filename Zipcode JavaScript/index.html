@@ -13,32 +13,56 @@
     <title>Zip Code!</title>
 </head>
 
-<body class="bg-dark">
-    <section class="location-finder bg-dark" >
-        <div class="main row">
-            <div class="col-12 col-md-6 py-5 px-1 text-center">
-                <div class="location-logo py-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-geo-alt-fill text-primary" viewBox="0 0 16 16">
-                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                    </svg>
-                </div>
-            <h1 class="display-1">US Location Info</h1>
-            <h2 class="display-6">Enter a zipcode to get the location info</h2>
-            <form id="zip" class="py-3 px-5" >
-                <input type="number" name="name" class="question" id="nme" required autocomplete="off" />
-                <label for="nme"><span>Enter Zip Code</span></label>
-                <input type="submit" class="btn btn-primary" value="Submit" />
-            </form>
+<body>
+    <section class="main row">
+        <div class="col-12 col-md-6 py-5 px-1 text-center">
+            <div class="location-logo py-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-geo-alt-fill text-primary" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+            </div>
+        <h1 class="display-1">Us Location Info</h1>
+        <h2 class="display-6">Enter a zipcode to get the location info</h2>
+        <form id="zip" class="py-3 px-5" >
+            <input type="number" name="name" class="question" id="nme" required autocomplete="off" />
+            <label for="nme"><span>Enter Zip Code</span></label>
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          </form>
 
-            <div class="outputDiv">
-                <div class="container">
-                    <div id="output"></div>
-                    <!-- Comment-->
+          <div class="outputDiv">
+            <div class="container">
+                <div id="output"></div>
+                <!-- Comment-->
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="hero hero-body is-dark container d-none">
+        <h1 class="title">Us Location Info</h1>
+        <h2 class="subtitle">Enter a zipcode to get the location info</h2>
+        <form id="zipForm">
+            <div class="field">
+                <div class="control has-icons-left has-icons-right">
+                    <input type="text" class="input zip is-large" placeholder="Enter Zipcode" value="">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-map-pin"></i>
+                    </span>
+                    <span class="icon is-small is-right icon-check">
+                            <i class="fa fa-check"></i>
+                        </span>
+                    <span class="icon is-small is-right icon-remove">
+                                <i class="fa fa-remove"></i>
+                            </span>
                 </div>
             </div>
-            </div>
-        <div/>
+        </form>
     </section>
+    <br>
+    <div class="container">
+        <div id="output"></div>
+        <!-- Comment-->
+    </div>
+
 
     <script src="main.js"></script>
 </body>
