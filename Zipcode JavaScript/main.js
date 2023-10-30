@@ -1,11 +1,11 @@
-document.querySelector('#zipForm').addEventListener('submit', getInfo);
+document.querySelector('#zip').addEventListener('submit', getInfo);
 
 document.querySelector('body').addEventListener('click', deleteLocation);
 
 
 function getInfo(e){
     e.preventDefault()
-    let zip = document.querySelector('.zip').value;
+    let zip = document.querySelector('#nme').value;
     
     //Make request to zip 
     fetch(`http://api.zippopotam.us/us/${zip}`)
@@ -14,7 +14,7 @@ function getInfo(e){
                 showIcon('remove')
                 document.querySelector('#output').innerHTML = 
                 `
-                <article class="message is-danger">
+                <article class="message text-danger">
                     <div class="message-body ">Invalid Zipcode, please try again!</div>
                 </article>
                 `;
@@ -29,9 +29,9 @@ function getInfo(e){
             let output = '';
             data.places.forEach(place => {
                 output+= `
-                <article class="message is-primary">
+                <article class="message bg-primary">
                     <div class="message-header">
-                        <p>Location Info</p>
+                        <p class="display-6 text-light" >Location Info</p>
                         <button class="delete"></button>
                     </div>
                     <div class"message-body">
@@ -60,7 +60,7 @@ function showIcon(icon){
 function deleteLocation(e){
     if(e.target.className == 'delete'){
         document.querySelector('.message').remove();
-        document.querySelector('.zip').value = '';
+        document.querySelector('#nme').value = '';
         document.querySelector('.icon-check').remove();
     }
 }
